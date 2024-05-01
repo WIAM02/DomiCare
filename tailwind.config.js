@@ -7,6 +7,9 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
+        // fontFamily: {
+        //     serif: ["Times"],
+        // },
         container: {
             center: true,
             padding: "2rem",

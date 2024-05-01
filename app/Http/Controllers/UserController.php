@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\User;
 use App\Models\Client;
+use App\Models\Intervention;
 use App\Models\Partenaire;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -32,7 +34,7 @@ class UserController extends Controller
 
     public function showIndexPage()
     {
-        return view('index');
+        return view('index', ['categories' => Category::all(), 'interventions' => Intervention::all()]);
     }
 
     public function login(Request $request)
